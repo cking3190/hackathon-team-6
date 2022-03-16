@@ -9,7 +9,7 @@ exports = function({ query, headers, body}, response) {
   
   var rec = {
     asin: asin,
-    price: price,
+    price: parseFloat(price),
     product_name: product_name,
     location: [parseFloat(lat), parseFloat(lon)]
   };
