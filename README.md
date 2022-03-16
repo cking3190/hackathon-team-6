@@ -10,16 +10,6 @@
 The application provides a User Interface that provides advanced searching capabilities such as auto-completion 
 and boosting search results based on specific criteria.
 
-### `yarn install`
-
-Installs all dependencies required to run the web application
-
-### `yarn start`
-
-### `cp -R build/ hosting/files`
-
-Applies builds the production app you made and applies changes to the static hosting files 
-
 # Details
 
 **Project** : High Availabilty During Search Pipeline Changes
