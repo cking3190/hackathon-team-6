@@ -5,12 +5,21 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, Grid, Box, IconButton , CardActionArea, CardActions } from '@mui/material';
 import * as styles from './ListingCard.styles'
+import axios from 'axios'
 
 export default function ListingCard(props) {
     const classes = styles.listingCardStyles()
 
+    const setBoost = (id, boost_score) => {
+      axios.get(`https://us-east-1.aws.data.mongodb-api.com/app/application-0-asolr/endpoint/setBoost?asin=${id}&boost=${boost_score}`)
+      .then((res) => {
+          const data = res.data;
+      })
+
+    }
+
   return (
-    <Card className={classes.cardArea} sx={{ maxWidth: 345, height:300 }}>
+    <Card className={classes.cardArea} sx={{ maxWidth: 345, height:500 }}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -22,7 +31,6 @@ export default function ListingCard(props) {
           <Typography gutterBottom variant="body2" component="div" style={{height:'2.5rem', overflow:'hidden', textOverflow:'ellipsis'}}>
             {props.data['Product Name']}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
               <Grid container justifyContent='center' align='center'> 
               <div>
                     <Box className={`${classes.headerText} ${classes.likes}`}>
@@ -44,22 +52,44 @@ export default function ListingCard(props) {
                     </Box>
 
               </div>
-              <div>
-                    <Box className={` ${classes.headerText}  ${classes.boost}`}>
-                        Boost
-                    </Box>
-                    <Box className={`${classes.weightBox} ${classes.boost}`}>
-                        {props.data.quantity.$numberInt}
-                    </Box>
-
-              </div>
 
 
 
               </Grid>
+              <Grid container  spacking={2} rowSpacing={{ xs: 1, sm: 2, md: 3 }}  gutterBottom style={{marginTop:'20px'}} justifyContent='center' align='center'> 
 
-                
-          </Typography>
+              <Grid item xs={6}>
+                    <Button variant='contained' onClick={() => setBoost(props.data['Uniq Id'], 0)}>
+                        Hide
+                    </Button>
+
+              </Grid>
+
+              <Grid item xs={6}>
+                    <Button variant='contained' onClick={() =>setBoost(props.data['Uniq Id'], .5)}>
+                        Bury
+                    </Button>
+
+              </Grid>
+
+              <Grid item xs={6}>
+                    <Button variant='contained' onClick={() => setBoost(props.data['Uniq Id'], 1.25)}>
+                        Boost
+                    </Button>
+
+              </Grid>
+
+              <Grid xs={6} item onClick={()=>setBoost(props.data['Uniq Id'], 10000)}>
+                    <Button variant='contained'>
+                        Pin
+                    </Button>
+
+              </Grid>
+
+
+              </Grid>
+
+
         </CardContent>
         </CardActionArea>
     </Card>
