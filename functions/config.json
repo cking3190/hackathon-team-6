@@ -1,5 +1,10 @@
 [
     {
+        "name": "products",
+        "private": false,
+        "run_as_system": true
+    },
+    {
         "name": "search",
         "private": false,
         "run_as_system": true
@@ -10,8 +15,7 @@
         "run_as_system": true
     },
     {
-        "name": "products",
-        "private": false,
-        "run_as_system": true
+        "name": "add_transaction",
+        "private": false
     }
 ]
