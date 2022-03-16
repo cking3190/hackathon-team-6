@@ -11,7 +11,7 @@ exports = function({ query, headers, body}, response) {
     asin: asin,
     price: price,
     product_name: product_name,
-    location: [lat, lon]
+    location: [parseFloat(lat), parseFloat(lon)]
   };
   
   context.services.get("mongodb-atlas").db("hack2022").collection("transactions").insertOne(rec);
