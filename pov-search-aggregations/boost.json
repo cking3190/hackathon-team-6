@@ -1,0 +1,33 @@
+db.amazonEcommMaster.aggregate([{
+  "$search": {
+    "text": {
+      "path": 'Product Name',
+      "query": "'Inline Skate'",
+      "score": {
+        "function":{
+          "multiply":[
+            {
+              "path": {
+                "value": "likes",
+                "undefined": 1
+              }
+            },
+            {
+              "score": "relevance"
+            }
+          ]
+        }
+      }
+    }
+  }
+},
+{
+  $limit: 5
+},
+{
+  $project: {
+    "_id": 0,
+    "Product Name": 1,
+    "score": { "$meta": "searchScore" }
+  }
+}])

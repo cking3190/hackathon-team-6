@@ -1,0 +1,20 @@
+db.amazonEcommMaster.aggregate([
+  {
+    $search: {
+      "compound": {
+        "must": [{
+          "text": {
+            "query": "longboard Titanium",
+            "path": "Product Name"
+          }
+        }],
+        "mustNot": [{
+          "text": {
+            "query": "longboard Bamboo Fiberglass ",
+            "path": "Product Name"
+          }
+        }]
+      }
+    }
+  }
+])
