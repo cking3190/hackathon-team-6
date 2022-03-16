@@ -27,7 +27,7 @@ with MongoDB's Application Development Platform.
 
 # Detailed Application Overview
 ### Application Architecture
-![](/Users/bmincey/WebstormProject/hackathon-team-6/img/Hackathon-6-Architecture-Diagram.png)
+![](/img/Hackathon-6-Architecture-Diagram.png)
 
 ### Technologies Used
 * MongoDB Atlas
