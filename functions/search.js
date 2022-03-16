@@ -20,7 +20,7 @@ exports = function({ query, headers, body}, response) {
             },
             "score": { 
               "boost": { 
-                path: "likes",
+                path: "boost",
                 'undefined': 0
               }
             }
