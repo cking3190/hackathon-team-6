@@ -1,6 +1,6 @@
 # Details
 
-**Project** : MongoMart  
+**Project** : High Availability during Search Pipeline Changes  
 **Team Number** : 6  
 **Team Name** : Manchester Is Red  
 **Demonstration Video** : _Insert link to demonstration video_
@@ -8,18 +8,8 @@
 # Overview
 
 The application provides a User Interface that provides advanced searching capabilities such as auto-completion 
-and boosting search results based on specific criteria.
-
-# Details
-
-**Project** : High Availabilty During Search Pipeline Changes
-**Team Number** : 6
-**Team Name** : Hackathon Team 6
-**Demonstration Video** : tbd
-
-# Overview
-
-In a live production environment we are able to update underlying search conditions to meet customer needs without involving any other teams.  
+and boosting search results based on specific criteria.  Search conditions can be modified with minimal effort and
+with no downtime.
 
 # Justification
 
@@ -41,13 +31,14 @@ with MongoDB's Application Development Platform.
 
 ### Technologies Used
 * MongoDB Atlas
-* Atlas Search (Autocomplete, Boost, Search Priority)
+* Atlas Search (Autocomplete, Boost, Pin, Bury, Hide, Search Priority)
 * MongoDB Charts
 * MongoDB Realm (Functions, Hosting, GitHub Integration)
 * React (Axios)
 
 ### What the Application Does and How it Works
-
+The application simulates a real-world search scenario for an ecommerce or products based company (MongoMart).  Search
+criteria can be modified and weighted utilizing the Pin, Hide, Bury, and Boost features of Atlas Search.  
 
 
 # Roles and Responsibilities
@@ -61,12 +52,16 @@ _Team Members/Contributions_
 * Blaine Mincey - Data Generation/Documentation
 
 # Demonstration Script
+### Setup
+1. Create MongoDB Atlas Cluster w/ database user and network whitelisting.
+2. Load products collection from /data directory
+3. Create Atlas Search indexes on products collection
+   1. 'default' index with [dynamic] index fields
+   2. 'autocomplete' index for 'Product Name' field and dynamic mapping 'off'
+4. Deploy Realm application with Realm command line interface
 
-_Demonstration script (or link to script) goes here_
+### Demonstration Script
 
-_The demonstration script should provide all the information required for another MongoDB SA to deliver your demonstration to a prospect. This should include:_
+#### Key Points to Emphasize
 
-* _setup/installation steps_
-* _step by step instructions on how to give the demonstration_
-* _key points to emphasize at each point in the demonstration_
-* _any tear down steps required to reset the demonstration so it is ready for the next time_
+#### Tear down instructions
