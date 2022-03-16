@@ -20,7 +20,7 @@ exports = function({ query, headers, body}, response) {
             },
             "score": { 
               "boost": { 
-                path: "likes",
+                path: "boost",
                 'undefined': 0
               }
             }
@@ -28,7 +28,7 @@ exports = function({ query, headers, body}, response) {
         }]
       }
     }
-  }, {
+  },{
     $project: {
         'Product Name': 1,
         'Product Url': 1,
@@ -39,11 +39,9 @@ exports = function({ query, headers, body}, response) {
         Image: 1,
         score: {$meta: 'searchScore'}
     }
-},
-    {
+  },{
       $limit:25
-      
-    }];
+  }];
   
   return context.services.get("mongodb-atlas").db("hack2022").collection("products").aggregate(pipeline).toArray();
   

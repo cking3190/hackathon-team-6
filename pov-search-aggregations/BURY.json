@@ -1,0 +1,12 @@
+[{$search: {
+  search: {
+    query: 'angles make joints' ,
+    path: 'product_description'
+  }
+}}, {$match: {
+  "product_id" : {$gte: 100001 , $lt: 100007}
+}}, {$project: {
+  product_id : 1 ,
+  product_description : 1 ,
+  burried_score : {$literal: 1}
+}}]

@@ -1,58 +1,67 @@
 # Details
 
-**Project** : MongoMart  
+**Project** : High Availability during Search Pipeline Changes  
 **Team Number** : 6  
 **Team Name** : Manchester Is Red  
 **Demonstration Video** : _Insert link to demonstration video_
 
 # Overview
 
-_Insert Executive Overview of your application/demonstration_
-
-### `yarn install`
-
-Installs all dependencies required to run the web application
-
-### `yarn start`
-
-### `cp -R build/ hosting/files`
-
-Applies builds the production app you made and applies changes to the static hosting files 
-
-# Details
-
-**Project** : High Availabilty During Search Pipeline Changes
-**Team Number** : 6
-**Team Name** : Hackathon Team 6
-**Demonstration Video** : tbd
-
-# Overview
-
-In a live production environment we are able to update underlying search conditions to meet customer needs without involving any other teams.  
+The application provides a User Interface that provides advanced searching capabilities such as auto-completion 
+and boosting search results based on specific criteria.  Search conditions can be modified with minimal effort and
+with no downtime.
 
 # Justification
 
-_Please explain why you decided to build the application/demonstration for this project. What inspired you? What problems does it solve or how will it make Presales activities easier?_
-_What MongoDB competitive differentiators (developer productivity, resiliency, scalability, etc.) does this demonstration showcase?_
+The group decided to construct an application that would demonstrate not only the value of an integrated search engine
+with a database but, most importantly, without the expense of an ETL process while indicating how quickly 
+search priority could be modified with changing market conditions.  
+
+Inspiration was from the ease of use and the
+power of making real-time changes to critical search functionality in minimum time without an expensive development
+sprint from a software engineering team.  From a Presales perspective, this demonstration will show the customer
+exactly what happens and what effort is required when a customer determines they need to change search priority.
+
+This illustrates developer productivity, resiliency, scalability, and ease of use among a variety of integration points 
+with MongoDB's Application Development Platform.
 
 # Detailed Application Overview
+### Application Architecture
+![](/img/Hackathon-6-Architecture-Diagram.png)
 
-_Describe the architecture of your application and include a diagram._
-_List all the MongoDB components/products used in your demonstration._
-_Describe what you application does and how it works_
+### Technologies Used
+* MongoDB Atlas
+* Atlas Search (Autocomplete, Boost, Pin, Bury, Hide, Search Priority)
+* MongoDB Charts
+* MongoDB Realm (Functions, Hosting, GitHub Integration)
+* React (Axios)
+
+### What the Application Does and How it Works
+The application simulates a real-world search scenario for an ecommerce or products based company (MongoMart).  Search
+criteria can be modified and weighted utilizing the Pin, Hide, Bury, and Boost features of Atlas Search.  
 
 
 # Roles and Responsibilities
 
-_List all the team members and summarize the contributions each member made to this project_
+_Team Members/Contributions_
+* Chris King - User Interface/Demo
+* Julia Guenther - Realm Functions/Demo/Data Load 
+* Benoit Lacharite - Data Wrangler/Search Pipeline
+* Suraj Shetty - Search Query Development
+* Leonardo Anez - User Interface
+* Blaine Mincey - Data Generation/Documentation
 
 # Demonstration Script
+### Setup
+1. Create MongoDB Atlas Cluster w/ database user and network whitelisting.
+2. Load products collection from /data directory
+3. Create Atlas Search indexes on products collection
+   1. 'default' index with [dynamic] index fields
+   2. 'autocomplete' index for 'Product Name' field and dynamic mapping 'off'
+4. Deploy Realm application with Realm command line interface
 
-_Demonstration script (or link to script) goes here_
+### Demonstration Script
 
-_The demonstration script should provide all the information required for another MongoDB SA to deliver your demonstration to a prospect. This should include:_
+#### Key Points to Emphasize
 
-* _setup/installation steps_
-* _step by step instructions on how to give the demonstration_
-* _key points to emphasize at each point in the demonstration_
-* _any tear down steps required to reset the demonstration so it is ready for the next time_
+#### Tear down instructions

@@ -1,0 +1,23 @@
+Customer experience , Ease of searching using ascii folding (ignores diacritics symbols searching)
+
+
+{
+  "analyzer": "asciiConverter",
+  "searchAnalyzer": "asciiConverter",
+  "mappings": {
+    "dynamic": true
+  },
+  "analyzers": [
+    {
+      "name": "asciiConverter",
+      "tokenizer": {
+        "type": "standard"
+      },
+      "tokenFilters": [
+        {
+          "type": "asciiFolding"
+        }
+      ]
+    }
+  ]
+}

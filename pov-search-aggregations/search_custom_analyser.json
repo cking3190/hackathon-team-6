@@ -1,0 +1,10 @@
+"analyzers": [
+  {
+    "name": "<name>",
+    "charFilters": [ <list-of-character-filters> ],
+    "tokenizer": {
+      "type": "<tokenizer-type>"
+    },
+    "tokenFilters": [ <list-of-token-filters> ]
+  }
+]
