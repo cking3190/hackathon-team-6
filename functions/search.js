@@ -20,7 +20,7 @@ exports = function({ query, headers, body}, response) {
             },
             "score": { 
               "boost": { 
-                path: "boost",
+                path: "likes",
                 'undefined': 0
               }
             }
@@ -37,6 +37,7 @@ exports = function({ query, headers, body}, response) {
         'selling Price': 1,
         likes: 1,
         Image: 1,
+        'Uniq Id':1,
         score: {$meta: 'searchScore'}
     }
   },{
