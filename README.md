@@ -9,6 +9,27 @@
 
 _Insert Executive Overview of your application/demonstration_
 
+### `yarn install`
+
+Installs all dependencies required to run the web application
+
+### `yarn start`
+
+### `cp -R build/ hosting/files`
+
+Applies builds the production app you made and applies changes to the static hosting files 
+
+# Details
+
+**Project** : High Availabilty During Search Pipeline Changes
+**Team Number** : 6
+**Team Name** : Hackathon Team 6
+**Demonstration Video** : tbd
+
+# Overview
+
+In a live production environment we are able to update underlying search conditions to meet customer needs without involving any other teams.  
+
 # Justification
 
 _Please explain why you decided to build the application/demonstration for this project. What inspired you? What problems does it solve or how will it make Presales activities easier?_
