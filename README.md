@@ -54,7 +54,7 @@ _Team Members/Contributions_
 # Demonstration Script
 ### Setup
 1. Create MongoDB Atlas Cluster w/ database user and network whitelisting.
-2. Load products collection from /data directory
+2. `mongorestore` products collection from /data directory
 3. Create Atlas Search indexes on products collection
    1. 'default' index with [dynamic] index fields
    2. 'autocomplete' index for 'Product Name' field and dynamic mapping 'off'
