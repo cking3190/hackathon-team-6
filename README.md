@@ -62,6 +62,22 @@ _Team Members/Contributions_
 
 ### Demonstration Script
 
+This script will simulate a user searching every .5 seconds and posting a transaction to our transactions collection
+
+## Prerequisites
+
+Python
+
+
+## Usage
+
+```bash
+python3 scripts/product_search.py
+```
+
 #### Key Points to Emphasize
+ - The ability to update complex underlying search aggregation queries easily with no downtime (search lives alongside your data)
+ - The ability to boost/hide/pin/bury results using search filters
 
 #### Tear down instructions
+- Quit out of the python script it will never stop
