@@ -1,22 +1,19 @@
-# Getting Started with Create React App
+# Details
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Project** : MongoMart  
+**Team Number** : 6  
+**Team Name** : Manchester Is Red  
+**Demonstration Video** : _Insert link to demonstration video_
 
-## Available Scripts
+# Overview
 
-In the project directory, you can run:
+_Insert Executive Overview of your application/demonstration_
 
 ### `yarn install`
 
 Installs all dependencies required to run the web application
 
 ### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
 ### `cp -R build/ hosting/files`
 
