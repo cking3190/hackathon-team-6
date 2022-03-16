@@ -43,6 +43,7 @@ export const autocompleteStyles = makeStyles((theme) => ({
     textField: {
       color: 'black',
       width:'30vw',
+      minWidth:'10rem',
       textTransform:'capitalize',
       fontSize:'12px'
     },

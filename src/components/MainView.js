@@ -60,11 +60,11 @@ export default function MainView() {
             </Grid>
         </div>
 
-        <Grid container spacing={4} style={{position:'relative', marginTop:'40px',  backgroundColor:'white', width:'80vw', alignItems:'center', justifyContent:'center'}}> 
+        <Grid container spacing={3} style={{position:'relative', marginTop:'40px',  backgroundColor:'white', width:'80vw', alignItems:'center', justifyContent:'center'}}> 
         {
                       results.length > 0
                       ? ( results.map((listing) => (
-                            <Grid item key={listing} xs={3} style={{ margin: '10px' }}>
+                            <Grid item key={listing} xs={5} md={3} style={{ margin: '10px' }}>
                               <ListingCard data={listing}> </ListingCard>
                             </Grid>
 )))
