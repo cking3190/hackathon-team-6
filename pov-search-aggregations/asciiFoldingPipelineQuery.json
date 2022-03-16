@@ -1,0 +1,17 @@
+db.amazonEcommMaster.aggregate([
+  {
+    $search: {
+      "index": "asciiConverter",
+      "text": {
+        "query": "benoît",
+        "path": "author"
+      }
+    }
+  },
+  {
+    $project: {
+      "_id": 1,
+      "author": 1
+    }
+  }
+])

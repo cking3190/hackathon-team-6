@@ -10,6 +10,27 @@
 The application provides a User Interface that provides advanced searching capabilities such as auto-completion 
 and boosting search results based on specific criteria.
 
+### `yarn install`
+
+Installs all dependencies required to run the web application
+
+### `yarn start`
+
+### `cp -R build/ hosting/files`
+
+Applies builds the production app you made and applies changes to the static hosting files 
+
+# Details
+
+**Project** : High Availabilty During Search Pipeline Changes
+**Team Number** : 6
+**Team Name** : Hackathon Team 6
+**Demonstration Video** : tbd
+
+# Overview
+
+In a live production environment we are able to update underlying search conditions to meet customer needs without involving any other teams.  
+
 # Justification
 
 The group decided to construct an application that would demonstrate not only the value of an integrated search engine
