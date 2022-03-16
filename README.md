@@ -6,6 +6,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `yarn install`
+
+Installs all dependencies required to run the web application
+
 ### `yarn start`
 
 Runs the app in the development mode.\
@@ -14,52 +18,44 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm run build`
+### `cp -R build/ hosting/files`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Applies builds the production app you made and applies changes to the static hosting files 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Details
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Project** : High Availabilty During Search Pipeline Changes
+**Team Number** : 6
+**Team Name** : Hackathon Team 6
+**Demonstration Video** : tbd
 
-### `npm run eject`
+# Overview
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+In a live production environment we are able to update underlying search conditions to meet customer needs without involving any other teams.  
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Justification
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+_Please explain why you decided to build the application/demonstration for this project. What inspired you? What problems does it solve or how will it make Presales activities easier?_
+_What MongoDB competitive differentiators (developer productivity, resiliency, scalability, etc.) does this demonstration showcase?_
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Detailed Application Overview
 
-## Learn More
+_Describe the architecture of your application and include a diagram._
+_List all the MongoDB components/products used in your demonstration._
+_Describe what you application does and how it works_
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Roles and Responsibilities
 
-### Code Splitting
+_List all the team members and summarize the contributions each member made to this project_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Demonstration Script
 
-### Analyzing the Bundle Size
+_Demonstration script (or link to script) goes here_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+_The demonstration script should provide all the information required for another MongoDB SA to deliver your demonstration to a prospect. This should include:_
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* _setup/installation steps_
+* _step by step instructions on how to give the demonstration_
+* _key points to emphasize at each point in the demonstration_
+* _any tear down steps required to reset the demonstration so it is ready for the next time_
