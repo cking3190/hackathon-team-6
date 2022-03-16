@@ -7,23 +7,47 @@
 
 # Overview
 
-_Insert Executive Overview of your application/demonstration_
+The application provides a User Interface that provides advanced searching capabilities such as auto-completion 
+and boosting search results based on specific criteria.
 
 # Justification
 
-_Please explain why you decided to build the application/demonstration for this project. What inspired you? What problems does it solve or how will it make Presales activities easier?_
-_What MongoDB competitive differentiators (developer productivity, resiliency, scalability, etc.) does this demonstration showcase?_
+The group decided to construct an application that would demonstrate not only the value of an integrated search engine
+with a database but, most importantly, without the expense of an ETL process while indicating how quickly 
+search priority could be modified with changing market conditions.  
+
+Inspiration was from the ease of use and the
+power of making real-time changes to critical search functionality in minimum time without an expensive development
+sprint from a software engineering team.  From a Presales perspective, this demonstration will show the customer
+exactly what happens and what effort is required when a customer determines they need to change search priority.
+
+This illustrates developer productivity, resiliency, scalability, and ease of use among a variety of integration points 
+with MongoDB's Application Development Platform.
 
 # Detailed Application Overview
+### Application Architecture
+![](/Users/bmincey/WebstormProject/hackathon-team-6/img/Hackathon-6-Architecture-Diagram.png)
 
-_Describe the architecture of your application and include a diagram._
-_List all the MongoDB components/products used in your demonstration._
-_Describe what you application does and how it works_
+### Technologies Used
+* MongoDB Atlas
+* Atlas Search (Autocomplete, Boost, Search Priority)
+* MongoDB Charts
+* MongoDB Realm (Functions, Hosting, GitHub Integration)
+* React (Axios)
+
+### What the Application Does and How it Works
+
 
 
 # Roles and Responsibilities
 
-_List all the team members and summarize the contributions each member made to this project_
+_Team Members/Contributions_
+* Chris King - User Interface/Demo
+* Julia Guenther - Realm Functions/Demo/Data Load 
+* Benoit Lacharite - Data Wrangler/Search Pipeline
+* Suraj Shetty - Search Query Development
+* Leonardo Anez - User Interface
+* Blaine Mincey - Data Generation/Documentation
 
 # Demonstration Script
 
